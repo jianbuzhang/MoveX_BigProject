@@ -1,0 +1,796 @@
+<mxfile host="65bd71144e">
+    <diagram id="FFGA-1a42GqgyU108d1H" name="第 1 页">
+        <mxGraphModel dx="1189" dy="551" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="53" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;fillColor=none;arcSize=3;" parent="1" vertex="1">
+                    <mxGeometry x="879" y="522.5" width="801" height="187.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;fillColor=none;arcSize=8;" parent="1" vertex="1">
+                    <mxGeometry x="879" y="411" width="710" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="基于点云的自动驾驶环境感知" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontColor=#990000;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="25" y="22" width="335" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="    SemanticKITTI" style="swimlane;fontSize=18;fontColor=#990000;strokeColor=#000000;fillColor=none;startSize=30;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="45" y="70" width="405" height="130" as="geometry">
+                        <mxRectangle x="30" y="70" width="190" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" value="A Dataset for Semantic Scene understanding &lt;br&gt;using Lidar sequences ." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontColor=#000000;" parent="5" vertex="1">
+                    <mxGeometry x="15" y="40" width="370" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="    知识大纲" style="swimlane;fontSize=18;fontColor=#990000;strokeColor=#000000;fillColor=none;startSize=30;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="45" y="230" width="425" height="160" as="geometry">
+                        <mxRectangle x="25" y="220" width="395" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="* 认识激光雷达和点云&lt;br&gt;* 传统的基于点云的障碍物检测算法介绍&lt;br&gt;* 深度学习的点云障碍物检测算法：&lt;b&gt;&lt;font color=&quot;#ff0000&quot;&gt;PointPillar&lt;/font&gt;&lt;/b&gt;&lt;br&gt;* 深度学习的点云语义分割技术：&lt;font color=&quot;#ff0000&quot;&gt;&lt;b&gt;RangeNet++&lt;/b&gt;&lt;/font&gt;原理" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontColor=#000000;" parent="7" vertex="1">
+                    <mxGeometry x="10" y="50" width="420" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="激光雷达分类&lt;br&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;(按技术路线分类)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;fontColor=#FF0000;strokeColor=#0000FF;strokeWidth=3;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="468" y="90" width="135" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="TOF(time of flight,时间飞行法)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fontColor=#FF0000;strokeColor=#0000FF;strokeWidth=3;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="663" y="70" width="175" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="三角测距法激光雷达" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fontColor=#FF0000;strokeColor=#0000FF;strokeWidth=3;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="663" y="135" width="125" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;fontColor=#FF0000;strokeColor=#0000FF;fillColor=#33FF33;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="9" target="10" edge="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="603" y="145" as="sourcePoint"/>
+                        <mxPoint x="663" y="105" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;fontColor=#FF0000;strokeColor=#0000FF;fillColor=#33FF33;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="9" target="14" edge="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="603" y="265" as="sourcePoint"/>
+                        <mxPoint x="663" y="225" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="22" value="    传统思路：基于K-D树的邻近搜索的欧式聚类" style="swimlane;fontSize=18;fontColor=#990000;strokeColor=#000000;fillColor=none;startSize=30;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="45" y="560" width="715" height="160" as="geometry">
+                        <mxRectangle x="25" y="220" width="395" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="23" value="* 聚类距离计算量大：对每两点均需计算&lt;font color=&quot;#ff0000&quot;&gt;欧氏距离&lt;/font&gt;；遍历计算时间极长。&lt;br&gt;* &lt;font color=&quot;#ff0000&quot;&gt;基于K-D树的邻域搜索聚类法&lt;/font&gt;：大幅度降低运算量；遍历搜索转为区块计算。&lt;br&gt;* 传统算法对点云的分割、检测的方法在自动驾驶中应用相对较少，&lt;br&gt;只能用于简单场景。" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontColor=#000000;" parent="22" vertex="1">
+                    <mxGeometry x="10" y="40" width="630" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="K-D树(K-Dimension Tree)是针对高维数据存储空间，针对每一维都进行二分，且二分操作在维度之间循环进行，从而把多维空间划分为多个子空间。当存储或查找数据时，根据数据所存在的空间标记进行范围搜索和最邻近搜索的数据查找方式。" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fontColor=#000000;fillColor=none;strokeColor=#000000;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="45" y="430" width="717" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="    结合PCL库使用K-D树进行欧式聚类" style="swimlane;fontSize=18;fontColor=#990000;strokeColor=#000000;fillColor=none;startSize=30;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="45" y="750" width="720" height="300" as="geometry">
+                        <mxRectangle x="25" y="220" width="395" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="28" value="主要语句：&lt;br&gt;pcl::search::KdTree&amp;lt;pcl::PointXYZ&amp;gt;::Ptr tree(new pcl::search::KdTree&amp;lt;pcl::PointXYZ&amp;gt;);&lt;br&gt;&lt;br&gt;tree-&amp;gt;setInputCloud(cloud_filtered);&lt;br&gt;std::vector&amp;lt;pcl::PointIndices&amp;gt; cluster_indices;&lt;br&gt;pcl::EuclideanClusterExtraction&amp;lt;pcl::PointXYZ&amp;gt; ec;&lt;br&gt;ec.setClusterTolerance(0.02);&lt;br&gt;ec.setMinClusterSize(100);&lt;br&gt;ec.setSearchMethod(tree);&lt;br&gt;ec.setInputCloud(cloud_filtered);&lt;br&gt;ec.extract(cluster_indices);" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontColor=#000000;" parent="27" vertex="1">
+                    <mxGeometry x="10" y="40" width="710" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="    使用更准确的深度学习思路去处理点云" style="swimlane;fontSize=18;fontColor=#990000;strokeColor=#000000;fillColor=none;startSize=30;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="880" y="30" width="720" height="178" as="geometry">
+                        <mxRectangle x="25" y="220" width="395" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="30" value="* 三维数据表示格式：点云、深度图像、网格、体积网格；&lt;br&gt;* &lt;b&gt;&lt;font color=&quot;#ff0000&quot;&gt;PointNet&lt;/font&gt;&lt;/b&gt;的提出开拓了新的点云处理的方法，即直接在点云上应用深度学习模型，&lt;br&gt;解决了点云数据的无序性、无结构性的问题。&lt;br&gt;* 对点云数据的深度学习处理内容包括：三维形状分类、三维目标检测与跟踪、三维&lt;br&gt;点云分割。" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontColor=#000000;" parent="29" vertex="1">
+                    <mxGeometry x="10" y="38" width="680" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="* 1.将三维投影成二维图片：速度快，但准确率低；&lt;br&gt;* 2.直接提取三维点云特征：准确率高，但速度慢；&lt;br&gt;* 3.2D图片和三维点云结合的形式。" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="890" y="282" width="420" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="深度学习处理点云的三种形式：" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontColor=#990000;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="880" y="240" width="335" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="Lidar+Image" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontColor=#FF0000;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="889" y="438" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="MV3D&lt;br&gt;CVPR 2017&lt;br&gt;AP:62.35" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#FF0000;" parent="1" vertex="1">
+                    <mxGeometry x="1109" y="428" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="MMF&lt;br&gt;CVPR 2019&lt;br&gt;AP:76.75" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#FF0000;" parent="1" vertex="1">
+                    <mxGeometry x="1419" y="428" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="F-PointNet&lt;br&gt;CVPR 2018&lt;br&gt;AP:70.39" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#FF0000;" parent="1" vertex="1">
+                    <mxGeometry x="1269" y="428" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="949" y="550" width="20" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="Lidar &lt;br&gt;Only" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontColor=#FF0000;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="879" y="590" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="Voxel-based" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#FF0000;" parent="1" vertex="1">
+                    <mxGeometry x="969" y="540" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="Point-based" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#FF0000;" parent="1" vertex="1">
+                    <mxGeometry x="969" y="660" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="VoxelNet&lt;br&gt;CVPR 2018&lt;br&gt;AP:65.11" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#FF0000;" parent="1" vertex="1">
+                    <mxGeometry x="1082" y="540" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="PointPillar&lt;br&gt;CVPR 2019&lt;br&gt;AP:74.99" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#FF0000;" parent="1" vertex="1">
+                    <mxGeometry x="1330" y="540" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="SECOND&lt;br&gt;Sensors 2018&lt;br&gt;AP:73.66" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#FF0000;" parent="1" vertex="1">
+                    <mxGeometry x="1195" y="540" width="118" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="PV-RCNN&lt;br&gt;Arxiv&lt;br&gt;AP R40:81.43" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#FF0000;" parent="1" vertex="1">
+                    <mxGeometry x="1553" y="540" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="Part-A2&lt;br&gt;Arxiv&lt;br&gt;AP:77.86" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#FF0000;" parent="1" vertex="1">
+                    <mxGeometry x="1450" y="540" width="103" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="PointRCNN&lt;br&gt;CVPR 2019&lt;br&gt;AP:75.76" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#FF0000;" parent="1" vertex="1">
+                    <mxGeometry x="1094" y="650" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="STD&lt;br&gt;ICCV 2019&lt;br&gt;AP:77.63" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#FF0000;" parent="1" vertex="1">
+                    <mxGeometry x="1224" y="650" width="103" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="主流代表框架如下：" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontColor=#990000;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="879" y="364" width="211" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="    基于深度学习的障碍物检测方法主流思路(点云)" style="swimlane;fontSize=18;fontColor=#990000;strokeColor=#000000;fillColor=none;startSize=30;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="879" y="740" width="411" height="210" as="geometry">
+                        <mxRectangle x="25" y="220" width="395" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="56" value="* PointNet(2016)&lt;br&gt;* PointNet++(2017)&lt;br&gt;* VoxelNet(2017)&lt;br&gt;* PointPillars(2018)&lt;br&gt;* Second(2018)&lt;br&gt;* PointRCNN(2019)&lt;br&gt;* TANet(2020)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontColor=#FF0000;fontStyle=1" parent="55" vertex="1">
+                    <mxGeometry x="23" y="40" width="180" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="* PointPillar网络特点：检测速度快，相对来说落地多些。&lt;br&gt;* PointPillar网络对于KITTI数据集的检测效果测试----" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="879" y="970" width="481" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="深度学习的点云分割技术：RangeNet++原理" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontColor=#990000;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="25" y="1130" width="455" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="    深度学习的点云分割技术：RangeNet++原理" style="swimlane;fontSize=19;fontColor=#990000;strokeColor=#000000;fillColor=none;startSize=30;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="45" y="1174" width="725" height="166" as="geometry">
+                        <mxRectangle x="25" y="220" width="395" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="62" value="&lt;b&gt;&lt;font color=&quot;#ff0000&quot;&gt;利用二维图像的语义分割结果恢复出三维点云的语义分割结果：&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&amp;nbsp;step1: spherical projection &lt;font color=&quot;#ff0000&quot;&gt;球映射&lt;/font&gt;：三维点云转换为二维图像(range image)&lt;br&gt;&amp;nbsp;step2: semantic segmentation 语义分割&lt;br&gt;&amp;nbsp;step3: raw output, point cloud reconstruction 点云重建&lt;br&gt;&amp;nbsp;step4: filtered output, post-processing 后处理" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontColor=#000000;" parent="61" vertex="1">
+                    <mxGeometry x="15" y="40" width="620" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="基于Lidar点云的3D物体检测算法" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontColor=#990000;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="25" y="1380" width="355" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="点云物体检测的发展历程" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#990000;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="25" y="1420" width="225" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" value="    传统方法" style="swimlane;fontSize=16;fontColor=#990000;strokeColor=#000000;fillColor=#99FF99;startSize=30;align=left;swimlaneFillColor=#99FF99;" parent="1" vertex="1">
+                    <mxGeometry x="51.370000000000005" y="1550" width="255" height="154" as="geometry">
+                        <mxRectangle x="25" y="220" width="395" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="77" value="* 点云--&amp;gt;图结构或深度图像&lt;br&gt;* 节点或像素聚类&lt;br&gt;* 地平面检测(规则或分类器)&lt;br&gt;* 物体分类(传统分类器)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontColor=#000000;" parent="76" vertex="1">
+                    <mxGeometry x="12.5" y="40" width="240" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="51.370000000000005" y="1457" width="719.255" height="68.00500000000011" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="" style="shape=singleArrow;direction=north;whiteSpace=wrap;html=1;fontSize=18;rotation=90;arrowWidth=0.682988993326823;arrowSize=0.10733000811408548;fillColor=none;strokeColor=#000000;" parent="78" vertex="1">
+                    <mxGeometry x="333.38" y="-317.8699999999999" width="57.5" height="714.25" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="&lt;font color=&quot;#0000ff&quot;&gt;传统方法&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;strokeColor=#000000;fillColor=#99FF99;" parent="78" vertex="1">
+                    <mxGeometry x="10" y="24" width="245" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="&lt;font color=&quot;#0000ff&quot;&gt;深度学习&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;strokeColor=#000000;fillColor=#FFFF66;" parent="78" vertex="1">
+                    <mxGeometry x="265" y="24.25" width="370" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="2010" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#0000FF;" parent="78" vertex="1">
+                    <mxGeometry width="45" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="2016" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#0000FF;" parent="78" vertex="1">
+                    <mxGeometry x="205" width="45" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="2021" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#0000FF;" parent="78" vertex="1">
+                    <mxGeometry x="458" width="45" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="86" value="" style="edgeStyle=none;html=1;fontSize=18;fontColor=#000000;" parent="1" source="79" target="83" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="87" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=18;fontColor=#000000;strokeColor=#000000;" parent="1" source="79" target="83" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="1.萌芽期&lt;br style=&quot;font-size: 18px;&quot;&gt;* 借鉴视觉领域&lt;br style=&quot;font-size: 18px;&quot;&gt;* 多种视图融合" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fontColor=#000000;strokeColor=#000000;fillColor=#FFFF66;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="331.37" y="1550" width="164.63" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="88" style="edgeStyle=none;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fontSize=18;fontColor=#000000;strokeColor=#000000;" parent="1" source="83" target="84" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" value="2.起步期&lt;br&gt;* &lt;font color=&quot;#ff0000&quot;&gt;&lt;b&gt;VoxelNet&lt;/b&gt;&lt;/font&gt;&lt;br&gt;* &lt;b&gt;&lt;font color=&quot;#ff0000&quot;&gt;PointNet&lt;/font&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fontColor=#000000;strokeColor=#000000;fillColor=#FFFF66;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="534.37" y="1550" width="164.63" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="89" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=18;fontColor=#000000;strokeColor=#000000;" parent="1" source="84" target="85" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" value="3.发展期&lt;br&gt;* Voxel改进&lt;br&gt;* Point改进&lt;br&gt;*Voxel+Point" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fontColor=#000000;strokeColor=#000000;fillColor=#FFFF66;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="328.68" y="1706" width="164.63" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="4.落地期&lt;br&gt;* 准确度+速度&lt;br&gt;* 大规模测试" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fontColor=#000000;strokeColor=#000000;fillColor=#FFFF66;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="534.37" y="1706" width="164.63" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="90" value="点云数据库" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#990000;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="879" y="1124" width="115" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="91" value="    点云数据库:KITTI" style="swimlane;fontSize=16;fontColor=#990000;strokeColor=#000000;fillColor=#99FF99;startSize=30;align=left;swimlaneFillColor=#99FF99;" parent="1" vertex="1">
+                    <mxGeometry x="899" y="1254" width="741" height="170" as="geometry">
+                        <mxRectangle x="25" y="220" width="395" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="93" value="* VELODYNE 64线激光雷达，每帧月10万个点；&lt;br&gt;* 城市道路环境，类别包括：车辆，行人，骑行者，8万个标注；&lt;br&gt;* 训练集：7481帧；测试集：7518帧；&lt;br&gt;* 根据物体大小和遮挡程度，分为easy,moderate,hard三种测试子集；&lt;br&gt;* AP和mAP作为算法准确度指标，Frame per sec(FPS)作为速度指标。" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontColor=#000000;" parent="91" vertex="1">
+                    <mxGeometry x="10.999999999999996" y="40" width="580" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="92" value="摘要：&lt;br&gt;* 2012：&lt;b&gt;&lt;font color=&quot;#ff0000&quot;&gt;ImageNet + AlexNet&lt;/font&gt;&lt;/b&gt;&lt;br&gt;* 自动驾驶技术的快速发展：来源于基于深度学习的感知技术" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="899" y="1174" width="500" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="94" value="    点云数据库:NuScenes" style="swimlane;fontSize=16;fontColor=#990000;strokeColor=#000000;fillColor=#99FF99;startSize=30;align=left;swimlaneFillColor=#99FF99;" parent="1" vertex="1">
+                    <mxGeometry x="899" y="1444" width="741" height="153" as="geometry">
+                        <mxRectangle x="25" y="220" width="395" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="95" value="* Motional公司 2019.03发布；&lt;br&gt;* 传感器：1*Lidar,5*Radar,6*Camera;&lt;br&gt;* Boston和Singapore的1000段道路场景，每段20秒（20hz）;&lt;br&gt;* 39万帧lidar点云数据，23个物体类别，140万个3D物体框标注(4万关键帧）" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontColor=#000000;" parent="94" vertex="1">
+                    <mxGeometry x="10.999999999999996" y="43" width="620" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="96" value="    点云数据库:Waymo Open Dataset(WOD)" style="swimlane;fontSize=16;fontColor=#990000;strokeColor=#000000;fillColor=#99FF99;startSize=30;align=left;swimlaneFillColor=#99FF99;" parent="1" vertex="1">
+                    <mxGeometry x="899" y="1620" width="741" height="150" as="geometry">
+                        <mxRectangle x="25" y="220" width="395" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="97" value="* waymo公司2019。08成立；&lt;br&gt;* 传感器：1*中距Lidar，4*近距Lidar，5*Camera;&lt;br&gt;* 1950段美国城市道路场景，每个20秒(10hz);&lt;br&gt;* 39万帧Lidar点云数据，4个物体类别，1200万个3D物体标注框。" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontColor=#000000;" parent="96" vertex="1">
+                    <mxGeometry x="10.999999999999996" y="43" width="540" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="98" value="" style="shape=table;html=1;whiteSpace=wrap;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=18;fontColor=#FF0000;strokeColor=#000000;fillColor=#FFFF66;" parent="1" vertex="1">
+                    <mxGeometry x="897" y="1829" width="743" height="321" as="geometry"/>
+                </mxCell>
+                <mxCell id="145" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="98" vertex="1">
+                    <mxGeometry width="743" height="47" as="geometry"/>
+                </mxCell>
+                <mxCell id="146" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="145" vertex="1">
+                    <mxGeometry width="186" height="47" as="geometry">
+                        <mxRectangle width="186" height="47" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="147" value="KITTI" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="145" vertex="1">
+                    <mxGeometry x="186" width="186" height="47" as="geometry">
+                        <mxRectangle width="186" height="47" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="148" value="NuScenes" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="145" vertex="1">
+                    <mxGeometry x="372" width="185" height="47" as="geometry">
+                        <mxRectangle width="185" height="47" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="149" value="WOD" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="145" vertex="1">
+                    <mxGeometry x="557" width="186" height="47" as="geometry">
+                        <mxRectangle width="186" height="47" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="99" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="98" vertex="1">
+                    <mxGeometry y="47" width="743" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="100" value="创建者" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="99" vertex="1">
+                    <mxGeometry width="186" height="46" as="geometry">
+                        <mxRectangle width="186" height="46" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="101" value="学术界" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="99" vertex="1">
+                    <mxGeometry x="186" width="186" height="46" as="geometry">
+                        <mxRectangle width="186" height="46" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="131" value="工业界" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="99" vertex="1">
+                    <mxGeometry x="372" width="185" height="46" as="geometry">
+                        <mxRectangle width="185" height="46" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="138" value="工业界" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="99" vertex="1">
+                    <mxGeometry x="557" width="186" height="46" as="geometry">
+                        <mxRectangle width="186" height="46" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="103" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="98" vertex="1">
+                    <mxGeometry y="93" width="743" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="104" value="发布时间" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="103" vertex="1">
+                    <mxGeometry width="186" height="46" as="geometry">
+                        <mxRectangle width="186" height="46" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="105" value="2012" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="103" vertex="1">
+                    <mxGeometry x="186" width="186" height="46" as="geometry">
+                        <mxRectangle width="186" height="46" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="132" value="2019" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="103" vertex="1">
+                    <mxGeometry x="372" width="185" height="46" as="geometry">
+                        <mxRectangle width="185" height="46" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="139" value="2019" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="103" vertex="1">
+                    <mxGeometry x="557" width="186" height="46" as="geometry">
+                        <mxRectangle width="186" height="46" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="111" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="98" vertex="1">
+                    <mxGeometry y="139" width="743" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="112" value="传感器" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="111" vertex="1">
+                    <mxGeometry width="186" height="45" as="geometry">
+                        <mxRectangle width="186" height="45" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="113" value="Lidar+Camera" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="111" vertex="1">
+                    <mxGeometry x="186" width="186" height="45" as="geometry">
+                        <mxRectangle width="186" height="45" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="133" value="Lidar+Camera+Radar" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="111" vertex="1">
+                    <mxGeometry x="372" width="185" height="45" as="geometry">
+                        <mxRectangle width="185" height="45" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="140" value="Lidar+Camera" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="111" vertex="1">
+                    <mxGeometry x="557" width="186" height="45" as="geometry">
+                        <mxRectangle width="186" height="45" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="115" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="98" vertex="1">
+                    <mxGeometry y="184" width="743" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="116" value="LiDar点云帧数" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="115" vertex="1">
+                    <mxGeometry width="186" height="46" as="geometry">
+                        <mxRectangle width="186" height="46" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="117" value="15K" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="115" vertex="1">
+                    <mxGeometry x="186" width="186" height="46" as="geometry">
+                        <mxRectangle width="186" height="46" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="134" value="390K" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="115" vertex="1">
+                    <mxGeometry x="372" width="185" height="46" as="geometry">
+                        <mxRectangle width="185" height="46" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="141" value="390K" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="115" vertex="1">
+                    <mxGeometry x="557" width="186" height="46" as="geometry">
+                        <mxRectangle width="186" height="46" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="119" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="98" vertex="1">
+                    <mxGeometry y="230" width="743" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="120" value="标注类别" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="119" vertex="1">
+                    <mxGeometry width="186" height="45" as="geometry">
+                        <mxRectangle width="186" height="45" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="121" value="3" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="119" vertex="1">
+                    <mxGeometry x="186" width="186" height="45" as="geometry">
+                        <mxRectangle width="186" height="45" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="135" value="23" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="119" vertex="1">
+                    <mxGeometry x="372" width="185" height="45" as="geometry">
+                        <mxRectangle width="185" height="45" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="142" value="4" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="119" vertex="1">
+                    <mxGeometry x="557" width="186" height="45" as="geometry">
+                        <mxRectangle width="186" height="45" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="123" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="98" vertex="1">
+                    <mxGeometry y="275" width="743" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="124" value="标注数量" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="123" vertex="1">
+                    <mxGeometry width="186" height="46" as="geometry">
+                        <mxRectangle width="186" height="46" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="125" value="80K" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="123" vertex="1">
+                    <mxGeometry x="186" width="186" height="46" as="geometry">
+                        <mxRectangle width="186" height="46" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="136" value="1.4M" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="123" vertex="1">
+                    <mxGeometry x="372" width="185" height="46" as="geometry">
+                        <mxRectangle width="185" height="46" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="143" value="12M" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;" parent="123" vertex="1">
+                    <mxGeometry x="557" width="186" height="46" as="geometry">
+                        <mxRectangle width="186" height="46" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="150" value="点云数据库对比" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#990000;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="889" y="1790" width="151" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="154" value="1.萌芽期--2017" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;fillColor=#FFFF66;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="25" y="1852" width="195" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="155" value="借鉴视觉领域的成功经验" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fontColor=#F0F0F0;strokeColor=#0000FF;fillColor=#0000FF;" parent="1" vertex="1">
+                    <mxGeometry x="51" y="1910" width="229" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="160" value="    VeloFCN" style="swimlane;fontSize=17;fontColor=#FF0000;strokeColor=#0000FF;strokeWidth=3;fillColor=none;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="51" y="1960" width="339" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="161" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 16px&quot;&gt;* 数据表示：3D点云--&amp;gt;正视图。&lt;/span&gt;&lt;br style=&quot;padding: 0px ; margin: 0px ; color: rgb(0 , 0 , 0) ; font-size: 16px&quot;&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 16px&quot;&gt;* 优点：数据格式与图像类似，&lt;/span&gt;&lt;br style=&quot;padding: 0px ; margin: 0px ; color: rgb(0 , 0 , 0) ; font-size: 16px&quot;&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 16px&quot;&gt;借鉴图像物体检测算法。&lt;/span&gt;&lt;br style=&quot;padding: 0px ; margin: 0px ; color: rgb(0 , 0 , 0) ; font-size: 16px&quot;&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 16px&quot;&gt;* 缺点：多个点映射到图像同一位置，&lt;/span&gt;&lt;br style=&quot;padding: 0px ; margin: 0px ; color: rgb(0 , 0 , 0) ; font-size: 16px&quot;&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 16px&quot;&gt;物体三维信息部分丢失。&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#FF0000;" parent="160" vertex="1">
+                    <mxGeometry x="10" y="45" width="280" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="162" value="    MV3D" style="swimlane;fontSize=17;fontColor=#FF0000;strokeColor=#0000FF;strokeWidth=3;fillColor=none;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="420" y="1960" width="340" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="163" value="&lt;font style=&quot;font-size: 16px&quot; color=&quot;#000000&quot;&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;* 数据显示：3D点云--&amp;gt;正视图+俯视图。&lt;br&gt;&lt;/font&gt;* 多视图融合：俯视图数据生成3D Proposal,&lt;br&gt;生成多视图Proposal，多视图下ROI-Pooling,&lt;br&gt;多层级融合。&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#FF0000;" parent="162" vertex="1">
+                    <mxGeometry x="5" y="40" width="330" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="164" value="    VoxelNet" style="swimlane;fontSize=17;fontColor=#FF0000;strokeColor=#0000FF;strokeWidth=3;fillColor=none;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="51" y="2336" width="340" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="165" value="&lt;font style=&quot;font-size: 16px&quot; color=&quot;#000000&quot;&gt;* 数据表示：3D点云--&amp;gt;3D网格数据。&lt;br style=&quot;padding: 0px ; margin: 0px&quot;&gt;* 端到端学习：feature learning network,&lt;br&gt;convolutional middle layers,&lt;br&gt;region proposal network&lt;br&gt;* 优点：框架结构非常简洁，自动学习特征。&lt;br&gt;* 来源：苹果公司&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#FF0000;" parent="164" vertex="1">
+                    <mxGeometry x="9" y="30" width="330" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="166" value="2.起步期--2017" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;fillColor=#FFFF66;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="25" y="2226" width="195" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="167" value="点云检测的开山之作:VoxelNet和PointNet++" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fontColor=#F0F0F0;strokeColor=#0000FF;fillColor=#0000FF;" parent="1" vertex="1">
+                    <mxGeometry x="51" y="2284" width="379" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="168" value="    PointNet++" style="swimlane;fontSize=17;fontColor=#FF0000;strokeColor=#0000FF;strokeWidth=3;fillColor=none;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="422" y="2336" width="340" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="169" value="&lt;font style=&quot;font-size: 16px&quot; color=&quot;#000000&quot;&gt;* 数据表示：原始数据点。&lt;br style=&quot;padding: 0px ; margin: 0px&quot;&gt;* 端到端学习：Clustering+PointNet&lt;br&gt;* 优点：无需进行空间量化，避免空白区域&lt;br&gt;无效计算。&lt;br&gt;* 来源：斯坦福大学。&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#FF0000;" parent="168" vertex="1">
+                    <mxGeometry x="9" y="30" width="310" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="170" value="3.发展期(2018--2020)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;fillColor=#FFFF66;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="25" y="2518" width="195" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="171" value="Voxel方法的问题" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fontColor=#F0F0F0;strokeColor=#0000FF;fillColor=#0000FF;" parent="1" vertex="1">
+                    <mxGeometry x="51" y="2562" width="209" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="172" value="Point方法的问题" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fontColor=#F0F0F0;strokeColor=#0000FF;fillColor=#0000FF;" parent="1" vertex="1">
+                    <mxGeometry x="416" y="2562" width="209" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="173" value="&amp;nbsp; &amp;nbsp;数据表示低效，大量空白区域" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;fillColor=none;size=8.629999999999995;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="51.37" y="2598" width="238.63" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="174" value="&amp;nbsp; &amp;nbsp;三维卷积计算量巨大" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;fillColor=none;size=8.629999999999995;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="51" y="2632" width="238.63" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="175" value="&amp;nbsp; &amp;nbsp;对网格量化超参数敏感" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;fillColor=none;size=8.629999999999995;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="51" y="2666" width="238.63" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="176" value="&amp;nbsp; &amp;nbsp;邻域特征提取困难" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;fillColor=none;size=8.629999999999995;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="416.37" y="2598" width="238.63" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="177" value="&amp;nbsp; &amp;nbsp;无法利用成熟的检测框架" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;fillColor=none;size=8.629999999999995;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="416" y="2632" width="238.63" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="178" value="&amp;nbsp; &amp;nbsp;点云处理难以并行" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;fillColor=none;size=8.629999999999995;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="416" y="2666" width="238.63" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="179" value="Voxel方向的改进" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fontColor=#F0F0F0;strokeColor=#0000FF;fillColor=#0000FF;" parent="1" vertex="1">
+                    <mxGeometry x="51" y="2712" width="209" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="181" value="&amp;nbsp; &amp;nbsp;数据表示低效，大量空白区域" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;fillColor=#FF3333;size=8.629999999999995;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="59.559999999999995" y="2752" width="238.63" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="182" value="    SECOND" style="swimlane;fontSize=17;fontColor=#FF0000;strokeColor=#0000FF;strokeWidth=3;fillColor=none;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="59.56" y="2792" width="240.44" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="183" value="&lt;font style=&quot;font-size: 16px&quot; color=&quot;#000000&quot;&gt;* 中间层采用稀疏卷积；&lt;br&gt;* 其余模块与VoxelNet类似；&lt;br&gt;* 缺点：3D卷积仍然存在。&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#FF0000;" parent="182" vertex="1">
+                    <mxGeometry x="9.31" y="30" width="220" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="184" value="&amp;nbsp; &amp;nbsp; 三维卷积计算量巨大" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;fillColor=#FF3333;size=8.629999999999995;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="320.68" y="2752" width="238.63" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="185" value="    PIXOR" style="swimlane;fontSize=17;fontColor=#FF0000;strokeColor=#0000FF;strokeWidth=3;fillColor=none;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="320.68" y="2792" width="239.32" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="186" value="&lt;font style=&quot;font-size: 16px&quot; color=&quot;#000000&quot;&gt;* 手工设计特征&lt;br&gt;* 3D-&amp;gt;2D H维度变通道&lt;br&gt;* 缺点：高度方向上信息缺失&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#FF0000;" parent="185" vertex="1">
+                    <mxGeometry x="9.31" y="30" width="220" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="187" value="&amp;nbsp; &amp;nbsp;数据表示低效，大量空白区域" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;fillColor=#FF3333;size=8.629999999999995;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="579.56" y="2752" width="238.63" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="188" value="    PointPillar" style="swimlane;fontSize=17;fontColor=#FF0000;strokeColor=#0000FF;strokeWidth=3;fillColor=none;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="579.56" y="2824" width="240.44" height="192" as="geometry"/>
+                </mxCell>
+                <mxCell id="189" value="&lt;font style=&quot;font-size: 16px&quot; color=&quot;#000000&quot;&gt;* H维度变通道 3D-&amp;gt;2D&lt;br&gt;* 网格内的点叠放成Pillar&lt;br&gt;* PointNet学习Pillar特征&lt;br&gt;* 优点：避免空白区域无效计&lt;br&gt;算，避免了3D卷积，避免手&lt;br&gt;工设计特征。&lt;br&gt;* 缺点：点特征学习局限在网&lt;br&gt;格内，邻域信息的提取受限。&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#FF0000;" parent="188" vertex="1">
+                    <mxGeometry x="9.31" y="34" width="220" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="190" value="&amp;nbsp; &amp;nbsp; 三维卷积计算量巨大" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;fillColor=#FF3333;size=8.629999999999995;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="580.47" y="2786" width="238.63" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="191" value="Point方向的改进" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fontColor=#F0F0F0;strokeColor=#0000FF;fillColor=#0000FF;" parent="1" vertex="1">
+                    <mxGeometry x="51.37" y="3028" width="209" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="192" value="&amp;nbsp; &amp;nbsp;无法利用成熟的检测框架" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;fillColor=#FF3333;size=8.629999999999995;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="59.93" y="3068" width="238.63" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="193" value="    Point-RCNN" style="swimlane;fontSize=17;fontColor=#FF0000;strokeColor=#0000FF;strokeWidth=3;fillColor=none;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="59.93" y="3108" width="240.44" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="194" value="&lt;font style=&quot;font-size: 16px&quot; color=&quot;#000000&quot;&gt;* PointNet++特征提取&lt;br&gt;* Point分类+3D Proposal&lt;br&gt;* Proposal内部点特征提取&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#FF0000;" parent="193" vertex="1">
+                    <mxGeometry x="9.31" y="30" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="195" value="&amp;nbsp; &amp;nbsp; 点云处理难以并行" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;fillColor=#FF3333;size=8.629999999999995;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="321.05" y="3068" width="238.63" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="196" value="    3D SSD" style="swimlane;fontSize=17;fontColor=#FF0000;strokeColor=#0000FF;strokeWidth=3;fillColor=none;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="321.05" y="3108" width="239.32" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="197" value="&lt;font style=&quot;font-size: 16px&quot; color=&quot;#000000&quot;&gt;* point方法速度分析&lt;br&gt;* 改进聚类方法&lt;br&gt;* 避免region pooling.&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#FF0000;" parent="196" vertex="1">
+                    <mxGeometry x="9.31" y="30" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="198" value="&amp;nbsp; &amp;nbsp;邻域特征提取困难" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;fillColor=#FF3333;size=8.629999999999995;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="579.93" y="3068" width="238.63" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="199" value="    Point GNN" style="swimlane;fontSize=17;fontColor=#FF0000;strokeColor=#0000FF;strokeWidth=3;fillColor=none;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="580.47" y="3108" width="240.44" height="102" as="geometry"/>
+                </mxCell>
+                <mxCell id="200" value="&lt;font style=&quot;font-size: 16px&quot; color=&quot;#000000&quot;&gt;* 图模型表示点云&lt;br&gt;* 图神经网络&lt;br&gt;* 计算量过大&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#FF0000;" parent="199" vertex="1">
+                    <mxGeometry x="8.4" y="30" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="202" value="3.发展期(2018--2020)-续" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;fillColor=#FFFF66;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="874" y="2226" width="236" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="203" value="Voxel和Point融合" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fontColor=#F0F0F0;strokeColor=#0000FF;fillColor=#0000FF;" parent="1" vertex="1">
+                    <mxGeometry x="900" y="2270" width="209" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="204" value="    PointPliiar" style="swimlane;fontSize=17;fontColor=#FF0000;strokeColor=#0000FF;strokeWidth=3;fillColor=none;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="900" y="2314" width="340" height="76" as="geometry"/>
+                </mxCell>
+                <mxCell id="205" value="&lt;font style=&quot;font-size: 16px&quot; color=&quot;#000000&quot;&gt;******&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#FF0000;" parent="204" vertex="1">
+                    <mxGeometry x="12.09" y="33" width="50" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="206" value="    PV-CNN" style="swimlane;fontSize=17;fontColor=#FF0000;strokeColor=#0000FF;strokeWidth=3;fillColor=none;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1269" y="2314" width="340" height="76" as="geometry"/>
+                </mxCell>
+                <mxCell id="207" value="&lt;font style=&quot;font-size: 16px&quot; color=&quot;#000000&quot;&gt;* 低分辨率的voxel上提取上下文特征。&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#FF0000;" parent="206" vertex="1">
+                    <mxGeometry x="6" y="36" width="290" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="208" value="4.落地期(2020-" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fontColor=#FF0000;strokeColor=#000000;fillColor=#FFFF66;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="877" y="2410" width="236" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="209" value="实用性和可落地性" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fontColor=#F0F0F0;strokeColor=#0000FF;fillColor=#0000FF;" parent="1" vertex="1">
+                    <mxGeometry x="903" y="2455" width="209" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="210" value="激光雷达点云物体检测" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="1173" y="2490" width="191" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="211" value="任务" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="966.09" y="2520" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="212" value="方法" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="1526.59" y="2520" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="213" value="目标" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#000000;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="1251.09" y="2520" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="214" value="&amp;nbsp; &amp;nbsp;自动驾驶系统的感知信号来源" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;fillColor=#FF3333;size=8.629999999999995;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="874" y="2551" width="270" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="215" value="&amp;nbsp; &amp;nbsp;作为辅助传感器用来进行数据标注" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;fillColor=#FF3333;size=8.629999999999995;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="878" y="2601" width="266" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="216" value="&amp;nbsp; 追求准确度和速度的平衡" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;fillColor=#FF3333;size=8.629999999999995;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1166.7699999999998" y="2551" width="238.63" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="217" value="&amp;nbsp; 一定速度前提下最大化准确度" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;fillColor=#FF3333;size=8.629999999999995;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1166.7699999999998" y="2601" width="238.63" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="218" value="&amp;nbsp; voxel+单截断检测器" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;fillColor=#FF3333;size=8.629999999999995;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1436.59" y="2551" width="238.63" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="219" value="&amp;nbsp; 融合voxel和point++两阶段检测" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;fillColor=#FF3333;size=8.629999999999995;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1436.59" y="2601" width="238.63" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="220" value="" style="shape=link;html=1;fontSize=16;fontColor=#000000;strokeColor=#000000;" parent="1" edge="1">
+                    <mxGeometry width="100" relative="1" as="geometry">
+                        <mxPoint x="874" y="2590" as="sourcePoint"/>
+                        <mxPoint x="1664" y="2590" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="221" value="    SIENet" style="swimlane;fontSize=17;fontColor=#FF0000;strokeColor=#0000FF;strokeWidth=3;fillColor=none;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="874" y="2650" width="286" height="157" as="geometry"/>
+                </mxCell>
+                <mxCell id="222" value="&lt;font style=&quot;font-size: 16px&quot; color=&quot;#000000&quot;&gt;* Voxel和Point融合两阶段检测方法&lt;br&gt;* 融合策略与PV-RCNN相似；&lt;br&gt;* 解决远处物体点云相对稀疏的问题&lt;br&gt;(采用了一个附加分支，将voxel的网&lt;br&gt;格看做额外的点，以此来对远处物体&lt;br&gt;进行补全)&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#FF0000;" parent="221" vertex="1">
+                    <mxGeometry x="8" y="35" width="270" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="224" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;fillColor=#FF3333;" parent="1" vertex="1">
+                    <mxGeometry width="10" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="225" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;fillColor=#FF3333;" parent="1" vertex="1">
+                    <mxGeometry x="1690" width="10" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="226" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;fillColor=#FF3333;" parent="1" vertex="1">
+                    <mxGeometry x="1690" y="3290" width="10" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="227" value="    Voxel R-CNN" style="swimlane;fontSize=17;fontColor=#FF0000;strokeColor=#0000FF;strokeWidth=3;fillColor=none;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1181" y="2650" width="319" height="157" as="geometry"/>
+                </mxCell>
+                <mxCell id="228" value="&lt;font style=&quot;font-size: 16px&quot; color=&quot;#000000&quot;&gt;* Voxel特征，两截断检测方法&lt;br&gt;* 结构非常简洁。&lt;br&gt;* Voxel ROI Pooling模块&lt;br&gt;&amp;nbsp;- 从3D数据而不是2D数据中提取特征&lt;br&gt;- 该方法可以进一步提高物体检测的精确度&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#FF0000;" parent="227" vertex="1">
+                    <mxGeometry x="8" y="33.5" width="310" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="229" value="    CIA-SSD" style="swimlane;fontSize=17;fontColor=#FF0000;strokeColor=#0000FF;strokeWidth=3;fillColor=none;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="874" y="2825" width="628" height="179" as="geometry"/>
+                </mxCell>
+                <mxCell id="230" value="&lt;font style=&quot;font-size: 16px&quot; color=&quot;#000000&quot;&gt;* Voxel特征，单阶段检测。&lt;br&gt;* 结构非常简洁。&lt;br&gt;* 特征提取与VoxelNet相似，但是用网格内的均值作为起始特征，而没有采样多层MLP.&lt;br&gt;* 借鉴图像物体检测领域的最新成果&lt;br&gt;- Feature Pyramid Network(FPN):提取语义特征。&lt;br&gt;- IoU预测分支：解决单阶段检测器分类置信度和定位准确度之间的差异问题，&lt;br&gt;修正分类置信度，辅助NMS.&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#FF0000;" parent="229" vertex="1">
+                    <mxGeometry x="8" y="41" width="620" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="231" value="KITTI Car Detection" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fontStyle=1;align=center;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;fillColor=#FF3333;" parent="1" vertex="1">
+                    <mxGeometry x="874" y="3030" width="766" height="222" as="geometry"/>
+                </mxCell>
+                <mxCell id="232" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="231" vertex="1">
+                    <mxGeometry y="30" width="766" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="233" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="232" vertex="1">
+                    <mxGeometry width="128" height="38" as="geometry">
+                        <mxRectangle width="128" height="38" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="234" value="PointPillar" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="232" vertex="1">
+                    <mxGeometry x="128" width="127" height="38" as="geometry">
+                        <mxRectangle width="127" height="38" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="235" value="PV-RCNN" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="232" vertex="1">
+                    <mxGeometry x="255" width="128" height="38" as="geometry">
+                        <mxRectangle width="128" height="38" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="244" value="SIENet" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="232" vertex="1">
+                    <mxGeometry x="383" width="128" height="38" as="geometry">
+                        <mxRectangle width="128" height="38" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="247" value="Voxel R-CNN" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="232" vertex="1">
+                    <mxGeometry x="511" width="127" height="38" as="geometry">
+                        <mxRectangle width="127" height="38" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="250" value="CIA-SSD" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="232" vertex="1">
+                    <mxGeometry x="638" width="128" height="38" as="geometry">
+                        <mxRectangle width="128" height="38" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="236" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="231" vertex="1">
+                    <mxGeometry y="68" width="766" height="39" as="geometry"/>
+                </mxCell>
+                <mxCell id="237" value="特征表示" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="236" vertex="1">
+                    <mxGeometry width="128" height="39" as="geometry">
+                        <mxRectangle width="128" height="39" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="238" value="Voxel+Point" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="236" vertex="1">
+                    <mxGeometry x="128" width="127" height="39" as="geometry">
+                        <mxRectangle width="127" height="39" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="239" value="Voxel+Point" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="236" vertex="1">
+                    <mxGeometry x="255" width="128" height="39" as="geometry">
+                        <mxRectangle width="128" height="39" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="245" value="Voxel+Point" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="236" vertex="1">
+                    <mxGeometry x="383" width="128" height="39" as="geometry">
+                        <mxRectangle width="128" height="39" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="248" value="Voxel" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="236" vertex="1">
+                    <mxGeometry x="511" width="127" height="39" as="geometry">
+                        <mxRectangle width="127" height="39" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="251" value="Voxel" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="236" vertex="1">
+                    <mxGeometry x="638" width="128" height="39" as="geometry">
+                        <mxRectangle width="128" height="39" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="240" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="231" vertex="1">
+                    <mxGeometry y="107" width="766" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="241" value="检测器" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="240" vertex="1">
+                    <mxGeometry width="128" height="38" as="geometry">
+                        <mxRectangle width="128" height="38" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="242" value="单阶段" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="240" vertex="1">
+                    <mxGeometry x="128" width="127" height="38" as="geometry">
+                        <mxRectangle width="127" height="38" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="243" value="两阶段" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="240" vertex="1">
+                    <mxGeometry x="255" width="128" height="38" as="geometry">
+                        <mxRectangle width="128" height="38" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="246" value="两阶段" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="240" vertex="1">
+                    <mxGeometry x="383" width="128" height="38" as="geometry">
+                        <mxRectangle width="128" height="38" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="249" value="两阶段" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="240" vertex="1">
+                    <mxGeometry x="511" width="127" height="38" as="geometry">
+                        <mxRectangle width="127" height="38" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="252" value="单阶段" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="240" vertex="1">
+                    <mxGeometry x="638" width="128" height="38" as="geometry">
+                        <mxRectangle width="128" height="38" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="253" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="231" vertex="1">
+                    <mxGeometry y="145" width="766" height="39" as="geometry"/>
+                </mxCell>
+                <mxCell id="254" value="准确度(AP)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="253" vertex="1">
+                    <mxGeometry width="128" height="39" as="geometry">
+                        <mxRectangle width="128" height="39" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="255" value="74.31%" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="253" vertex="1">
+                    <mxGeometry x="128" width="127" height="39" as="geometry">
+                        <mxRectangle width="127" height="39" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="256" value="81.43%" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="253" vertex="1">
+                    <mxGeometry x="255" width="128" height="39" as="geometry">
+                        <mxRectangle width="128" height="39" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="257" value="81.71%" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="253" vertex="1">
+                    <mxGeometry x="383" width="128" height="39" as="geometry">
+                        <mxRectangle width="128" height="39" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="258" value="81.62%" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="253" vertex="1">
+                    <mxGeometry x="511" width="127" height="39" as="geometry">
+                        <mxRectangle width="127" height="39" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="259" value="80.28%" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="253" vertex="1">
+                    <mxGeometry x="638" width="128" height="39" as="geometry">
+                        <mxRectangle width="128" height="39" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="260" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="231" vertex="1">
+                    <mxGeometry y="184" width="766" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="261" value="速度(FPS)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="260" vertex="1">
+                    <mxGeometry width="128" height="38" as="geometry">
+                        <mxRectangle width="128" height="38" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="262" value="62.0" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="260" vertex="1">
+                    <mxGeometry x="128" width="127" height="38" as="geometry">
+                        <mxRectangle width="127" height="38" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="263" value="12.5" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="260" vertex="1">
+                    <mxGeometry x="255" width="128" height="38" as="geometry">
+                        <mxRectangle width="128" height="38" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="264" value="12.5" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="260" vertex="1">
+                    <mxGeometry x="383" width="128" height="38" as="geometry">
+                        <mxRectangle width="128" height="38" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="265" value="25.2" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="260" vertex="1">
+                    <mxGeometry x="511" width="127" height="38" as="geometry">
+                        <mxRectangle width="127" height="38" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="266" value="33" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=16;fontColor=#000000;strokeColor=#0000FF;" parent="260" vertex="1">
+                    <mxGeometry x="638" width="128" height="38" as="geometry">
+                        <mxRectangle width="128" height="38" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,32 @@
+1、进入每个src同级目录打开终端，重新编译：
+
+	source /opt/ros/melodic/setup.bash
+	catkin_make
+
+2、修改usb_cam_workspce/src/usb_cam/launch/usb_cam.launch
+	可以根据录制不同个数摄像头，来修改launch文件。
+3、
+启动激光雷达驱动
+	./start_lidar.sh
+启动相机驱动
+	./start_camera.sh
+4、一些常用录制命令：
+	录制一个相机:
+		rosbag record /usb_cam0/image_raw/compressed
+	录制三个相机:
+		rosbag record /usb_cam0/image_raw/compressed /usb_cam1/image_raw/compressed /usb_cam2/image_raw/compressed
+
+	录制一个相机和左激光雷达:
+		rosbag record /left/rslidar_points /usb_cam0/image_raw/compressed
+
+	录制一个相机和中间激光雷达:
+		rosbag record /middle/rslidar_points /usb_cam0/image_raw/compressed
+
+	左边激光雷达，左前相机：
+		rosbag record /left/rslidar_points /usb_cam0/image_raw/compressed
+	右边激光雷达，右前相机
+		rosbag record /right/rslidar_points /usb_cam0/image_raw/compressed
+	右边激光雷达，右侧相机
+		rosbag record /right/rslidar_points /usb_cam0/image_raw/compressed
+	左边激光雷达，左侧相机
+		rosbag record /left/rslidar_points /usb_cam0/image_raw/compressed

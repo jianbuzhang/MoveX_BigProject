@@ -1,0 +1,16 @@
+-I/opt/ros/melodic/include
+-I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp
+-I/usr/include/eigen3
+-I/usr/include/OGRE/Overlay
+-I/usr/include/OGRE
+-I/usr/include
+-I/usr/include/opencv
+-I/home/jinjian/MOVEX+GITHUB_CODE/MoveX_BigProject/ROS_QT_GUI/src/Ros_Qt5_Gui_App_ver_master
+-I/home/jinjian/MOVEX+GITHUB_CODE/MoveX_BigProject/ROS_QT_GUI/build/Ros_Qt5_Gui_App_ver_master
+-DROS_BUILD_SHARED_LIBS=1
+-DROS_BUILD_SHARED_LIBS=1
+-DROS_PACKAGE_NAME="cyrobot_monitor"
+-DROSCONSOLE_BACKEND_LOG4CXX
+-o
+/home/jinjian/MOVEX+GITHUB_CODE/MoveX_BigProject/ROS_QT_GUI/build/Ros_Qt5_Gui_App_ver_master/include/cyrobot_monitor/moc_qrviz.cpp
+/home/jinjian/MOVEX+GITHUB_CODE/MoveX_BigProject/ROS_QT_GUI/src/Ros_Qt5_Gui_App_ver_master/include/cyrobot_monitor/qrviz.hpp

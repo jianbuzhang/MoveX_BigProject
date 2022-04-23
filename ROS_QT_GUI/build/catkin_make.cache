@@ -1,0 +1,2 @@
+Ros_Qt5_Gui_App_qml_hmi:Ros_Qt5_Gui_App_ver_master:Ros_Qt5_Gui_App_ver_simple:beginner_tutorials:visualization_tutorials
+-DCATKIN_DEVEL_PREFIX=/home/jinjian/MOVEX+GITHUB_CODE/MoveX_BigProject/ROS_QT_GUI/devel -DCMAKE_INSTALL_PREFIX=/home/jinjian/MOVEX+GITHUB_CODE/MoveX_BigProject/ROS_QT_GUI/install -G Unix Makefiles

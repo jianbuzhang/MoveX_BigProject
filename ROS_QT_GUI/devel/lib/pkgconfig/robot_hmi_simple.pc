@@ -1,0 +1,8 @@
+prefix=/home/jinjian/MOVEX+GITHUB_CODE/MoveX_BigProject/ROS_QT_GUI/devel
+
+Name: robot_hmi_simple
+Description: Description of robot_hmi_simple
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

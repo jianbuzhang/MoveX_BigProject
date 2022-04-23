@@ -1,0 +1,20 @@
+for i = 1:length(idx)
+    if (0 == mod(i,10))
+        I = readImage(imageMsgs{idx(i,1)});
+        pc = pointCloud(readXYZ(pcMsgs{idx(i,2)}));
+        n_strPadded = sprintf( '%04d', i ) ;
+        pcFileName = strcat(pcbFilesPath,'\', n_strPadded, '.pcd')
+        imageFileName = strcat(imageFilesPath,'\', n_strPadded, '.png')
+        imwrite(I, imageFileName);
+        pcwrite(pc, pcFileName);
+	end
+end
+
+for i = 1:length(cc_imageMsgs)
+    if (0 == mod(i,20))
+        I = readImage(cc_imageMsgs{i});
+        n_strPadded = sprintf( '%04d', i ) ;
+        imageFileName = strcat(cc_imageFilesPath,'/', n_strPadded, '.png')
+        imwrite(I, imageFileName);
+    end
+end

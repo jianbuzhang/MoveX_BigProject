@@ -1,0 +1,4 @@
+KERNEL=="video*",ATTRS{idVendor}=="2304", ATTRS{idProduct}=="3070", MODE="0777",SYMLINK+="video10"
+KERNEL=="video*",ATTRS{idVendor}=="2304", ATTRS{idProduct}=="3071", MODE="0777",SYMLINK+="video11"
+KERNEL=="video*",ATTRS{idVendor}=="2304", ATTRS{idProduct}=="3072", MODE="0777",SYMLINK+="video12"
+KERNEL=="video*",ATTRS{idVendor}=="2304", ATTRS{idProduct}=="3073", MODE="0777",SYMLINK+="video13"

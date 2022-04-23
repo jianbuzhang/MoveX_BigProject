@@ -1,0 +1,19 @@
+<mxfile host="65bd71144e">
+    <diagram id="4u-pl0iy6k6pSSWD25F4" name="第 1 页">
+        <mxGraphModel dx="808" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="自动驾驶环境感知----3D目标检测与跟踪" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontColor=#990000;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="25" y="22" width="415" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="    1.知识大纲" style="swimlane;fontSize=18;fontColor=#990000;strokeColor=#000000;fillColor=none;startSize=30;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="27.5" y="62" width="297.5" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="* 立体视觉原理&lt;br&gt;* 相机标定&lt;br&gt;* 相机校正&lt;br&gt;* 视觉图与深度图生成&lt;br&gt;* 立体视觉发展历史&lt;br&gt;* 三维检测背景下立体视觉" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontColor=#000000;" vertex="1" parent="3">
+                    <mxGeometry x="17.5" y="40" width="230" height="140" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
